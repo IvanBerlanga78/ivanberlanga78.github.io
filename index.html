@@ -27,29 +27,27 @@
 
 <body>
   <div id="box">
-    <header>
-        <div id="logo">
-           <img src="imgs/logo.svg" alt="logotipo Iván Berlanga"/>
-        </div>
-        <nav>
+    <header id="header">
+           <img id="logo" src="imgs/logo.svg" alt="logotipo Iván Berlanga"/>
+        <nav class="navigation">
           <ul>
-            <li><a id="jumpToTop" href="#">Inicio</a></li>
-            <li><a id="jumptoSkills" href="#">Skills</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a id="jumpToAboutMe" href="#section1">Inicio</a></li>
+            <li><a id="jumptoSkills" href="#section2">Skills</a></li>
+            <li><a id="jumptoProjects" href="#section3">Proyectos</a></li>
+            <li><a href="#sectionLink4">Contacto</a></li>
           </ul>
         </nav>
     </header>
     <div id="main">
-      <section id="about-me">
+      <section id="section1" class="about-me">
         <div class="about-me-text-container">
           <img src="imgs/empathy-image.svg">
-          <h3><b>Mi objetivo: Crear experiencias visuales con empatía, creatividad y objetividad</b></h3>
+          <h3 class="big"><b>Mi objetivo: Crear experiencias visuales con empatía, creatividad y objetividad</b></h3>
           <p>Soy Iván Berlanga, diseñador multidisciplinar de Barcelona con más de 8 años de experiencia en diseño gráfico y web. He trabajado para grandes empresas como Correos España o Mundo Deportivo y para startups y otros clientes también como freelance. Mi objetivo es usar mi creatividad y mi experiencia para crear propuestas de valor para las marcas y sus clientes.</p>
         </div>
       </section>
-      <section id="skills">
-        <img src="imgs/skills-image.svg">
+      <section id="section2" class="skills">
+        <img id="imagen" src="imgs/skills-image.svg">
         <div class="skills-container">
           <div class="skill">
             <img src="imgs/logo_html5.svg">
@@ -101,11 +99,12 @@
           </div>  
         </div>
       </section>
-      <section id="projects">
-        <h2>Proyectos</h2>
+      <section id="section3" class="projects">
+        <h2>Proyectos / Logos</h2>
         <aside id="logos">
         <h3 class="big"><b><span>></span> Identidades visuales y logos para el mundo digital</b></h3>
         <p>Deben ser memorables, atractivos e intemporales. Con mi experiencia como diseñador digital aplico al mundo gráfico mis conocimientos para asegurarme una identidad visual consistente en todos los dispositivos y de un modo accesible y user friendly.</p>
+        <div class="container1">
           <img src="imgs/projects/logos_bida.svg" alt="logo Bida">
           <img src="imgs/projects/logos_clearwaterchem.svg" alt="logo ClearWaterChem">
           <img src="imgs/projects/logos_direct.svg" alt="logo Direct">
@@ -117,9 +116,10 @@
           <img src="imgs/projects/logos_nauticsoft.svg" alt="logo nauticsoft">
           <img src="imgs/projects/logos_qumuy.svg" alt="logo qumuy">
           <img src="imgs/projects/logos_shopator.svg" alt="logo shopator">
+        </div>
         </aside>
         <aside id="ilustracion">
-          <h2>Proyectos</h2>
+          <h2>Proyectos / Ilustración</h2>
           <h3 class="big"><b><span>></span> Expresiones potentes y llenas de significado</b></h3>
           <p>Las ilustraciones pueden llegar a tener un sentido y una potencia expresiva de las que la imagen a veces carece. Utilizo mis capacidades creativas para sintetizar y conceptualizar los mensajes. Y mi experiencia como diseñador para dotarlas de los matices que necesiten para comunicar el mensaje.</p>
             <div class="container1">
@@ -134,7 +134,7 @@
             </div>
         </aside>
         <aside id="grafica">
-          <h2>Proyectos</h2>
+          <h2>Proyectos / Gráfica</h2>
           <h3 class="big"><b><span>></span> Diseño integral para experiencias físicas memorables</b></h3>
           <p>Uno todas mis capacidades para ofrecer una experiencia visual completa. Una intención física que ayuda a las marcas a viajar hasta sus clientes, a hacerles llegar su presencia y su mensaje.</p>
           <div class="container1">
@@ -162,7 +162,7 @@
           </div>
         </aside>
         <aside id="online">
-          <h2>Proyectos</h2>
+          <h2>Proyectos / Web y RRSS</h2>
           <h3 class="big"><b><span>></span> Sistemas de diseño con consistencia y escala</b></h3>
           <p>Mis sistemas de diseño online aúnan todos los estilos digitales, recursos y componentes para ofrecer un producto digital atractivo y consistente en todas las escalas. Desde websites que inspiren a ecommerces que convenzan. Siempre con el objetivo claro de ofrecer una experiencia con significado para el usuario.</p>
           <div class="container1">
