@@ -50,7 +50,6 @@ function navHighlighter() {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     sectionId = current.getAttribute("id");
-    console.log(sectionId);
     
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it

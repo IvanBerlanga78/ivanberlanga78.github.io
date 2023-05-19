@@ -71,7 +71,7 @@ h1, h2, h3 {
 }
 
 #box {
-  max-width: 640px;
+  max-width: 800px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
@@ -137,12 +137,12 @@ h3.big {
   line-height: 1em;
 }
 
-#projects h2 {
+.projects h2 {
   margin-bottom: 0;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
-#projects p {
+.projects p {
   margin-bottom:40px;
 }
 
@@ -159,7 +159,7 @@ h3.big {
   display: grid;
   grid-template: 50% 50% / 70% 30%;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 #ilustracion .container1 .item1{ 
@@ -178,14 +178,14 @@ h3.big {
   display: grid;
   grid-template: 100%/ 33% 33% 33%;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 #grafica .container1 {
   display: grid;
-  grid-template: 100% / repeat(2 , 1fr);
+  grid-template: 1fr / repeat(2 , 1fr);
   align-items: baseline;
-  margin-top: 30px;
+  margin-top: 80px;
   column-gap: 20px;
 }
 
@@ -193,7 +193,7 @@ h3.big {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
   align-items: start;
-  margin-top: 30px;
+  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -208,11 +208,12 @@ h3.big {
   grid-row-start: 3;
 }
 
+
 #grafica .container3 {
   display: grid;
   grid-template: 1fr 1fr 2fr / repeat(2, 1fr);
   align-items: start;
-  margin-top: 30px;
+  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -221,7 +222,7 @@ h3.big {
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
   align-items: start;
-  margin-top: 30px;
+  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -237,7 +238,7 @@ h3.big {
 #online .container1, #online .container2, #online .container3, #online .container4, #online .container5, #online .container6, #online .container7   {
   display: grid;
   align-items: start;
-  margin-top: 30px;
+  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -265,4 +266,23 @@ h3.big {
 }
 #online .container7 {
   grid-template: 1fr / repeat(3, 1fr);
+}
+
+@media screen and (max-width: 800px){
+
+  #ilustracion .container1, #ilustracion .container2 {
+    display: block;
+  }
+
+  #grafica .container1, #grafica .container2, #grafica .container3 ,#grafica .container4 {
+    display: block;
+  }
+
+  #online .container1, #online .container2, #online .container3, #online .container4, #online .container5, #online .container6, #online .container7{
+    display: block;
+  }
+
+  .projects img {
+    margin: 40px auto 0 auto;
+  }
 }
