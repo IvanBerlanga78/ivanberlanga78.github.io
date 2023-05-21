@@ -50,6 +50,7 @@ function navHighlighter() {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     sectionId = current.getAttribute("id");
+    let navLink = document.querySelector(".navigation ul li a[href*=" + sectionId + "]");
     
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
@@ -59,9 +60,10 @@ function navHighlighter() {
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
     ){
-      document.querySelector(".navigation ul li a[href*=" + sectionId + "]").classList.add("active");
+      console.log(navLink);
+      navLink.classList.add("active");
     } else {
-      document.querySelector(".navigation ul li  a[href*=" + sectionId + "]").classList.remove("active");
+      navLink.classList.remove("active");
     }
   });
 }
@@ -141,11 +143,13 @@ window.addEventListener("scroll", (event) => {
    let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426" 
    if (st > lastScrollTop) {
     logo.src = "./imgs/logo-mobile.svg"
-    addClass(document.getElementById('header'), 'thin');    
+    addClass(document.getElementById('header'), 'thin');
+    document.querySelector(".navigation ul").classList.add("visible");    
    }
    else{
     logo.src = "./imgs/logo.svg";
-    removeClass(document.getElementById('header'), 'thin');  
+    removeClass(document.getElementById('header'), 'thin');
+    document.querySelector(".navigation ul").classList.remove("visible");  
    }
 
 });
