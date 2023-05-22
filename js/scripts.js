@@ -125,3 +125,29 @@ window.addEventListener("scroll", (event) => {
    }
 
 });
+
+//CTA's scroll
+
+let cta1 = document.querySelector(".about-me .cta");
+
+cta1.addEventListener('click', function(event){
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    // top gets the distance from the top of the page of our target element
+    top: document.querySelector('.skills').offsetTop    
+  });
+  event.preventDefault();
+})
+
+let cta2 = document.querySelector(".skills .text .cta");
+
+cta2.addEventListener('click', function(event){
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    // top gets the distance from the top of the page of our target element
+    top: document.querySelector('.projects').offsetTop    
+  });
+  event.preventDefault();
+})
