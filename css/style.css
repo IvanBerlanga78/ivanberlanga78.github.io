@@ -90,15 +90,22 @@ nav ul.visible {
 }
 
 header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+
+}
+header .container {
   display: flex;
   align-items: center;
-  position: fixed;
+  justify-content: center;
+  width: 100%;
   background: #e75653;
-  width: 800px;
   height: 100px;
-  z-index: 10;
 }
-header.thin {
+
+header.thin .container{
   height:80px;
   transition: height .1s linear; 
 }
@@ -298,12 +305,11 @@ h3.big {
 
 .contact img {
   max-width: 175px;
+  border-radius: 15px;
   border: 3px solid #fff;
   margin-left: auto;
 }
 @media screen and (max-width: 800px){
-  
-
   a {
     font-size: 16px;
   }
