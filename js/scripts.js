@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // get the element where to scroll
         let ref = link.href.split('#section');
         ref = "#section" + ref[1];
-        console.log(ref);
         // ie 11 does not support smooth scroll, so we will simply scroll
         if (isIE11) {
           window.scrollTo(0, document.querySelector(ref).offsetTop);
@@ -114,12 +113,12 @@ let scrollTop = document.getElementById('main').offsetTop;
 window.addEventListener("scroll", (event) => {
    let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426" 
    if (st > lastScrollTop) {
-    logo.src = "./imgs/logo-mobile.svg"
+
     addClass(document.getElementById('header'), 'thin');
     document.querySelector(".navigation ul").classList.add("visible");    
    }
    else{
-    logo.src = "./imgs/logo.svg";
+
     removeClass(document.getElementById('header'), 'thin');
     document.querySelector(".navigation ul").classList.remove("visible");  
    }
@@ -151,3 +150,88 @@ cta2.addEventListener('click', function(event){
   });
   event.preventDefault();
 })
+
+
+// Sliders
+
+const leftArrows = document.querySelectorAll(".left-arrow"),
+  rightArrows = document.querySelectorAll(".right-arrow")
+  //slider = document.getElementsByClassName(".slider[num]");
+
+  const listOfSliders = document.querySelectorAll("div[class^=sliderNum]");
+  console.log(leftArrows);
+
+/**
+ * @brief Scroll to the right
+ */
+function scrollRight(slider) {
+
+  //console.log(listOfSliders)
+
+  listOfSliders.forEach(slider => {
+    let ref = slider.className.split('sliderNum');
+    ref = ".sliderNum" + ref[1];
+    let elem = document.querySelector(ref).className;
+  
+    if (ref.scrollWidth - ref.clientWidth === ref.scrollLeft) {
+      document.querySelector(ref).scrollTo({
+        left: 0,
+        behavior: "smooth"
+      });
+    } else {
+      console.log(ref);
+      document.querySelector(ref).scrollBy({
+        left: window.innerWidth,
+        behavior: "smooth"
+      });
+    }
+
+  })
+
+}
+
+/**
+ * @brief Scroll to the left
+ */
+function scrollLeft(slider) {
+
+  //console.log('left');
+  listOfSliders.forEach(slider => {
+    let ref = slider.className.split('sliderNum');
+    ref = ".sliderNum" + ref[1];
+    let elem = document.querySelector(ref).className;
+    document.querySelector(ref).scrollBy({
+    left: -window.innerWidth,
+    behavior: "smooth"
+  });
+  })
+}
+
+// Auto slider
+let timerId = setInterval(scrollRight, 5000);
+
+/**
+ * @brief Reset timer for scrolling right
+ */
+function resetTimer() {
+  clearInterval(timerId);
+  timerId = setInterval(scrollRight, 5000);
+}
+
+
+// Scroll Events
+
+leftArrows.forEach(leftArrow => {
+    leftArrow.addEventListener("click", function (ev) {
+    scrollLeft();
+    resetTimer(); 
+  })
+});
+
+rightArrows.forEach(rightArrow =>{
+  rightArrow.addEventListener("click", function (ev) {
+  scrollRight();
+  resetTimer(); 
+})
+});
+

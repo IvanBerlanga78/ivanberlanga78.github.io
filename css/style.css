@@ -115,7 +115,7 @@ header .container {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: linear-gradient(180deg, #e75653, rgba(231, 86, 83, .9) 59%, transparent);
+  background-image: linear-gradient(180deg, #e75653, rgba(231, 86, 83, .9) 80%, transparent);
   height: 100px;
 }
 
@@ -139,6 +139,7 @@ ul li{
 
 #main .about-me, #main .skills, #main .logos, #main .ilustracion, #main .grafica, #main .online, #main .contact {
   padding-top: 100px;
+  position: relative;
 }
 
 #main .about-me {
@@ -195,9 +196,12 @@ h3.big {
   margin-bottom:40px;
 }
 
-.logos .container1{
+.logos .container1, 
+.logos .container2, 
+.logos .container3,
+.logos .container4 {
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
 }
 
 .logos img {
@@ -208,7 +212,6 @@ h3.big {
   display: grid;
   grid-template: 50% 50% / 70% 30%;
   align-items: center;
-  margin-top: 80px;
 }
 
 .ilustracion .container1 .item1{ 
@@ -227,14 +230,12 @@ h3.big {
   display: grid;
   grid-template: 100%/ 33% 33% 33%;
   align-items: center;
-  margin-top: 80px;
 }
 
 .grafica .container1 {
   display: grid;
   grid-template: 1fr / repeat(2 , 1fr);
   align-items: baseline;
-  margin-top: 80px;
   column-gap: 20px;
 }
 
@@ -242,7 +243,6 @@ h3.big {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
   align-items: start;
-  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -262,7 +262,6 @@ h3.big {
   display: grid;
   grid-template: 1fr 1fr 2fr / repeat(2, 1fr);
   align-items: start;
-  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -271,7 +270,6 @@ h3.big {
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
   align-items: start;
-  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -287,7 +285,6 @@ h3.big {
 .online .container1, .online .container2, .online .container3, .online .container4, .online .container5, .online .container6, .online .container7   {
   display: grid;
   align-items: start;
-  margin-top: 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
@@ -338,6 +335,57 @@ h3.big {
   border: 3px solid #fff;
   margin-left: auto;
 }
+
+.sliderNum1, .sliderNum2, .sliderNum3, .sliderNum4 {
+  width: 800px;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.slider__slide { 
+  min-width: 800px;
+  width: 100%;
+  font-size: 4rem;
+  scroll-snap-align: start; 
+}
+
+.sliderNum1 .arrow-class , .sliderNum2 .arrow-class, .sliderNum3 .arrow-class,  .sliderNum4 .arrow-class {
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.sliderNum1 .arrow-class img, .sliderNum2 .arrow-class img,  .sliderNum3 .arrow-class img, .sliderNum4 .arrow-class img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sliderNum1 .arrow-class.left-arrow, .sliderNum2 .arrow-class.left-arrow, .sliderNum3 .arrow-class.left-arrow, .sliderNum4 .arrow-class.left-arrow {
+  left:-60px
+}
+
+.sliderNum1 .arrow-class.right-arrow, .sliderNum2 .arrow-class.right-arrow, .sliderNum3 .arrow-class.right-arrow, .sliderNum4 .arrow-class.right-arrow  {
+  right: -60px
+}
+
+/* 
+Media Queries
+*/
+
 @media screen and (max-width: 800px){
   a {
     font-size: 16px;
@@ -352,7 +400,6 @@ h3.big {
       line-height: 1em;
   }
 
-  
   #box {
     width: 100%;
   }
@@ -365,7 +412,8 @@ h3.big {
     width: 26px;
   }
   #main .about-me img {
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
+    max-width: 300px;
   }
 
   .ilustracion .container1, .ilustracion .container2 {
