@@ -60,7 +60,6 @@ function navHighlighter() {
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
     ){
-      console.log(navLink);
       navLink.classList.add("active");
     } else {
       navLink.classList.remove("active");
@@ -68,57 +67,29 @@ function navHighlighter() {
   });
 }
 
-/*
-document.addEventListener('scroll', function () {
-
-    let sections = document.querySelectorAll("section");
-    let childrenNodeArr = Array.from(sections);
-    const elemFound1 = childrenNodeArr.find(
-        e =>
-          e.classList.contains("about-me")
-      );
-    sections.forEach(section => {
-     // console.log(typeof section);
-     
-        if (isInViewport(section, true)===true){
-            
-
-
-            
-            if (elemFound1) {
-              let link1 = document.getElementById('jumpToAboutMe');
-              console.log(link1);
-              addClass(link1,'highlighted');
-            }
-        }
-
-    })
-});
-
-*/
-
 // https://dev.to/albertomontalesi/javascript-tutorial-create-a-smooth-scroll-navigation-17kp
 
 document.addEventListener("DOMContentLoaded", () => {
     //  little hack to detect if the user is on ie 11
     const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
     // get all the links with an ID that starts with 'sectionLink'
-    const listOfLinks = document.querySelectorAll("a[href^='#sectionLink");
+    const listOfLinks = document.querySelectorAll("a[href^='#section");
      
     // loop over all the links
     listOfLinks.forEach(function (link) {
       // listen for a click
-      link.addEventListener('click',  () => {
+      link.addEventListener('click',  (event) => {
         // toggle highlight on and off when we click a link
         listOfLinks.forEach( (link) => {
-          if (link.classList.contains('highlighted')) {
-            link.classList.remove('highlighted');
+          if (link.classList.contains('active')) {
+            link.classList.remove('active');
           }
         });
-        link.classList.add('highlighted');
+        link.classList.add('active');
         // get the element where to scroll
-        let ref = link.href.split('#sectionLink');
+        let ref = link.href.split('#section');
         ref = "#section" + ref[1];
+        console.log(ref);
         // ie 11 does not support smooth scroll, so we will simply scroll
         if (isIE11) {
           window.scrollTo(0, document.querySelector(ref).offsetTop);
@@ -127,9 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: 'smooth',
             left: 0,
             // top gets the distance from the top of the page of our target element
-            top: document.querySelector(ref).offsetTop - 100
+            top: document.querySelector(ref).offsetTop
           });
         } 
+        event.preventDefault();
       })
     })
   })

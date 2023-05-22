@@ -112,12 +112,14 @@ ul li{
   display: inline-block;
 }
 
-#main {
-  margin-top: 95px;
+#main .about-me, #main .skills, #main .logos, #main .ilustracion, #main .grafica, #main .online, #main .contact {
+  padding-top: 100px;
 }
 
 #main .about-me {
   display: flex;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #fff;
 }
 
 #main .about-me .about-me-photo{
@@ -281,6 +283,8 @@ h3.big {
 
 .contact {
   margin: 80px 0;
+  border-top: 1px solid #fff;
+  text-align: right;
 }
 
 .contact a, .contact p {
@@ -288,14 +292,23 @@ h3.big {
 }
 
 .contact a {
-  margin-left: 5px;
+  margin-right: 5px;
+  margin-left: 0;
 }
 
+.contact img {
+  max-width: 175px;
+  border: 3px solid #fff;
+  margin-left: auto;
+}
 @media screen and (max-width: 800px){
   
 
   a {
     font-size: 16px;
+  }
+  header {
+    width: auto;
   }
   a.secondary {
     display: none;
