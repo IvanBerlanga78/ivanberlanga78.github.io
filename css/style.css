@@ -99,8 +99,6 @@ section p {
   max-width: 800px;
   padding: 0 20px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap; 
 }
 
 header {
@@ -336,51 +334,7 @@ h3.big {
   margin-left: auto;
 }
 
-.sliderNum1, .sliderNum2, .sliderNum3, .sliderNum4 {
-  width: 800px;
-  display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-}
 
-.slider__slide { 
-  min-width: 800px;
-  width: 100%;
-  font-size: 4rem;
-  scroll-snap-align: start; 
-}
-
-.sliderNum1 .arrow-class , .sliderNum2 .arrow-class, .sliderNum3 .arrow-class,  .sliderNum4 .arrow-class {
-  width: 60px;
-  height: 60px;
-  top: 80%;
-  position: absolute;
-  cursor: pointer;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-
-.sliderNum1 .arrow-class img, .sliderNum2 .arrow-class img,  .sliderNum3 .arrow-class img, .sliderNum4 .arrow-class img {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.sliderNum1 .arrow-class.left-arrow, .sliderNum2 .arrow-class.left-arrow, .sliderNum3 .arrow-class.left-arrow, .sliderNum4 .arrow-class.left-arrow {
-  left:-60px
-}
-
-.sliderNum1 .arrow-class.right-arrow, .sliderNum2 .arrow-class.right-arrow, .sliderNum3 .arrow-class.right-arrow, .sliderNum4 .arrow-class.right-arrow  {
-  right: -60px
-}
 
 /* 
 Media Queries
@@ -390,45 +344,38 @@ Media Queries
   a {
     font-size: 16px;
   }
+
   a.secondary {
     display: none;
   }
-  
+
   h3.big {
-      text-transform: none;
-      font-size: 3em;
-      line-height: 1em;
+    text-transform: none;
+    font-size: 3em;
+    line-height: 1em;
   }
 
-  #box {
-    width: 100%;
-  }
-
-  #box, #main .about-me, .skills .container { 
+  #box, #main .about-me, .skills .container {
     display: block;
-  }
-  
+    width: 100%;
+    overflow: hidden;
+}
   .skill {
     width: 26px;
   }
+  
+  #main .about-me {
+    display: block;
+  }
+
   #main .about-me img {
     margin: 40px auto 0 auto;
     max-width: 300px;
   }
 
-  .ilustracion .container1, .ilustracion .container2 {
-    display: block;
+  .sliderNum1, .sliderNum2, .sliderNum3, .sliderNum4 {
+    width: auto;
   }
 
-  .grafica .container1, .grafica .container2, .grafica .container3 ,.grafica .container4 {
-    display: block;
-  }
 
-  .online .container1, .online .container2, .online .container3, .online .container4, .online .container5, .online .container6, .online .container7{
-    display: block;
-  }
-
-  .projects img {
-    margin: 40px auto 0 auto;
-  }
 }
