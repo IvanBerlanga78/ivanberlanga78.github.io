@@ -73,7 +73,7 @@ a.secondary {
  padding-bottom: 5px;
  border-bottom: 1px solid #ffed28;
  letter-spacing: 1px;
- font-weight: 500;
+ font-weight: 700;
 }
 
 #logo {
@@ -322,29 +322,40 @@ h3.big {
 }
 
 .contact {
-  margin: 80px 0;
-  border-top: 1px solid #fff;
-  text-align: right;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
-.contact a, .contact p {
-  font-size: 18px;
-}
-
-.contact a {
-  margin-right: 5px;
-  margin-left: 0;
+.contact .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    width: 224px;
 }
 
 .contact img {
-  max-width: 175px;
-  border-radius: 15px;
-  border: 3px solid #fff;
-  margin-left: auto;
+  width: 30px;
+  margin-left: 5px;
 }
 
+.contact a { 
+  font-size: 15px;
+  font-weight: 700;
+}
 
-
+footer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-image: url(../imgs/logo.svg);
+  background-position: 100% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+footer h4 {
+  font-size: 12px;
+}
 /* 
 Media Queries
 */
