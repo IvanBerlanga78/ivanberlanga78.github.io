@@ -114,12 +114,10 @@ window.addEventListener("scroll", (event) => {
    let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426" 
    if (st > lastScrollTop) {
 
-    addClass(document.getElementById('header'), 'thin');
     document.querySelector(".navigation ul").classList.add("visible");    
    }
    else{
 
-    removeClass(document.getElementById('header'), 'thin');
     document.querySelector(".navigation ul").classList.remove("visible");  
    }
 
@@ -161,6 +159,7 @@ for ( var i=0, len = galleryElems.length; i < len; i++ ) {
   var galleryElem = galleryElems[i];
   new Flickity( galleryElem, {
     cellAlign: 'left',
+    autoPlay: true,
     contain: true
   });
 }

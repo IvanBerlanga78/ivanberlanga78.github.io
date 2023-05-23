@@ -117,10 +117,6 @@ header .container {
   height: 100px;
 }
 
-header.thin .container{
-  height:80px;
-  transition: height .1s linear; 
-}
 
 header nav {
   display: flex;
@@ -142,7 +138,6 @@ ul li{
 
 #main .about-me {
   display: flex;
-  padding-bottom: 50px;
   align-items: center;
 }
 
@@ -155,12 +150,11 @@ ul li{
   align-items: center;
 }
 
-
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-height: 180px;
+  min-height: 110px;
 }
 
 .skills .container > img{
@@ -223,6 +217,15 @@ h3.big {
 .ilustracion .container1 .item3{ 
   grid-area: 2 / 2 / 2 / 2;
 }
+.ilustracion .container1 .item3{ 
+
+}
+.ilustracion .full{ 
+  width: 600px;
+}
+.ilustracion .half{ 
+  width: 300px;
+}
 
 .ilustracion .container2 {
   display: grid;
@@ -233,7 +236,7 @@ h3.big {
 .grafica .container1 {
   display: grid;
   grid-template: 1fr / repeat(2 , 1fr);
-  align-items: baseline;
+  align-items: start;
   column-gap: 20px;
 }
 
@@ -255,6 +258,12 @@ h3.big {
   grid-row-start: 3;
 }
 
+.grafica .half {
+  width: 370px;
+}
+.grafica .third {
+  width: 175px;
+}
 
 .grafica .container3 {
   display: grid;
@@ -373,9 +382,22 @@ Media Queries
     max-width: 300px;
   }
 
-  .sliderNum1, .sliderNum2, .sliderNum3, .sliderNum4 {
-    width: auto;
+  .online .container1 {
+    grid-template: 1fr / repeat(2, 1fr);
+  }
+  .online .container2, .online .container3, .online .container5  {
+    grid-template: 1fr / repeat(1, 1fr);
+  }
+  .online .container2 .item1, .online .container3 .item1, .online .container4 .item3, .online .container5 .item2, .online .container7 .item3{
+    display: none;
   }
 
+  .online .container4, .online .container7 {
+    grid-template: 1fr / repeat(2, 1fr);
+  }
+
+  .flickity-button {
+    display: none;
+  }
 
 }
