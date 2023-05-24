@@ -160,7 +160,8 @@ for ( var i=0, len = galleryElems.length; i < len; i++ ) {
   new Flickity( galleryElem, {
     cellAlign: 'left',
     autoPlay: true,
-    contain: true
+    contain: true,
+    imagesLoaded: true
   });
 }
 
