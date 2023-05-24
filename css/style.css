@@ -354,6 +354,11 @@ h3.big {
   z-index: 10;
 }
 
+.slider {
+  height: 100%;
+  width: 100%;
+}
+
 #background-video {
   width: 100vw;
   height: 430px;
