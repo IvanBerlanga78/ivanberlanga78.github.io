@@ -149,6 +149,17 @@ cta2.addEventListener('click', function(event){
   event.preventDefault();
 })
 
+let logoElem = document.querySelector("#logo");
+
+logoElem.addEventListener('click', function(event){
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    // top gets the distance from the top of the page of our target element
+    top: 0    
+  });
+  event.preventDefault();
+})
 
 //Sliders
 
