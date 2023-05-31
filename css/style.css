@@ -224,9 +224,7 @@ h3.big {
 .ilustracion .container1 .item3{ 
   grid-area: 2 / 2 / 2 / 2;
 }
-.ilustracion .container1 .item3{ 
 
-}
 .ilustracion .full{ 
   width: 600px;
 }
@@ -299,30 +297,22 @@ h3.big {
   column-gap: 20px;
   row-gap: 20px;
 }
-.online .container1 {
-  grid-template: 1fr / repeat(4, 1fr);
+.online .container {
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 580px 45px;
 }
 
-.online .container2 {
-  grid-template: 1fr / repeat(2, 1fr);
+.online .cta {
+  grid-column: 1 / span 2;
+  width: 152px;
+  margin: 16px 0 auto auto;
+}
+.online .bordered img, .grafica img {
+  border: 8px solid #fff;
 }
 
-.online .container3 {
-  grid-template: 1fr / repeat(2, 1fr);
-}
-
-.online .container4 {
-  grid-template: 1fr / repeat(3, 1fr);
-}
-
-.online .container5 {
-  grid-template: 1fr / repeat(2, 1fr);
-}
 .online .container6 {
-  grid-template: 1fr / repeat(2, 1fr);
-}
-.online .container7 {
-  grid-template: 1fr / repeat(3, 1fr);
+  grid-template: 1fr / repeat(4, 1fr);
 }
 
 .contact {
@@ -386,9 +376,9 @@ h3.big {
 footer .container {
   height: 80px;
   align-items: center;
-  background-image: url(../imgs/logo.svg);
+  background-image: url(../imgs/logo_ivan_v03.svg);
   background-position: 100% 50%;
-  background-size: 150px;
+  background-size: 80px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -446,18 +436,20 @@ Media Queries
     max-width: 300px;
   }
 
-  .online .container1 {
-    grid-template: 1fr / repeat(2, 1fr);
-  }
-  .online .container2, .online .container3, .online .container5  {
+  .online .container  {
     grid-template: 1fr / repeat(1, 1fr);
   }
-  .online .container2 .item1, .online .container3 .item1, .online .container4 .item3, .online .container4 .item2, .online .container5 .item2,.online .container6 .item1, .online .container7 .item2, .online .container7 .item3{
+  
+  .online .container .item2 {
     display: none;
   }
 
-  .online .container4, .online .container6, .online .container7 {
-    grid-template: 1fr / repeat(1, 1fr);
+  .online .container6 {
+    display: none;
+  }
+
+  .online .cta {
+    margin: 0 auto;
   }
 
   .flickity-button {
