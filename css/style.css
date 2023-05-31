@@ -12,6 +12,7 @@ https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 html, body {
     height: 100%;
+    color: #fff;
   }
 
 body {
@@ -37,6 +38,10 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+}
+
+p {
+  color: #fff;
 }
 
 ul {
@@ -372,12 +377,22 @@ h3.big {
   z-index: 5;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
 
 footer .container {
   height: 80px;
   align-items: center;
   background-image: url(../imgs/logo_ivan_v03.svg);
-  background-position: 100% 50%;
+  background-position: 90% 50%;
   background-size: 80px;
   background-repeat: no-repeat;
   position: relative;
