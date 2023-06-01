@@ -113,11 +113,11 @@ let scrollTop = document.getElementById('main').offsetTop;
 window.addEventListener("scroll", (event) => {
    let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426" 
    if (st > lastScrollTop) {
-
+    logo.style.display = "none"; 
     document.querySelector(".navigation ul").classList.add("visible");    
    }
    else{
-
+    logo.style.display = "block"; 
     document.querySelector(".navigation ul").classList.remove("visible");  
    }
 

@@ -30,8 +30,21 @@ input, button, textarea, select {
   }
 
 nav a {
-  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: 700;
+  height: 30px;
+  display: block;
+  border-left: 4px solid #fff;
+  padding-top: 5px;
+}
+
+
+nav a.secondary {
+  font-size: 15px;
+  margin-left: 5px;
+  border-left: 1px solid #fff;
+  font-weight: 400;
 }
 
 a {
@@ -70,11 +83,6 @@ body{
 
 h1, h2, h3 {
   font-weight: 700;
-}
-
-a.secondary {
-  font-size: 15px;
-  margin-left: 5px;
 }
 
 .cta {
@@ -427,7 +435,6 @@ Media Queries
 
   nav a {
     font-size: 15px;
-    margin-left: 8px;
   }
 
   a {
