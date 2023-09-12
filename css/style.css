@@ -251,6 +251,25 @@ h3.big {
   align-items: center;
 }
 
+.ilustracion .container2 {
+  display: grid;
+  grid-template: 100%/ 33% 33% 33%;
+  align-items: center;
+}
+
+.ilustracion .container3 {
+  display: grid;
+  grid-template: 100%/ 35% 35% 20%;
+  column-gap: 20px;
+}
+.ilustracion .container4 {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  align-items: start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
 .grafica .container1 {
   display: grid;
   grid-template: 1fr / repeat(2 , 1fr);
@@ -486,6 +505,9 @@ Media Queries
 
   .flickity-button {
     display: none;
+  }
+  #contact {
+    position: relative;
   }
 
 }
