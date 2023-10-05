@@ -457,9 +457,43 @@
       <div class="text">
         <h2>¿Qué es lo siguiente?</h2>
         <h3 class="big"><b>Trabajemos juntos</b><span class="yellow">.</span></h3>
-        <p>Si quieres que hablemos sobre un proyecto en el que necesitas ayuda, envíame un mensaje a <a href="mailto:hola@ivanberlanga.design">hola@ivanberlanga.design</a>. Estoy disponible como diseñador web y diseñador gráfico.</p>
-        <a class="cta" href="mailto:hola@ivanberlanga.design">Escríbeme un email <img src="imgs/icon-envelope.svg"></a>
+        <p>Si quieres que hablemos sobre un proyecto en el que necesitas ayuda, rellena el siguiente formulario y me pondré en contacto contigo. Estoy disponible como diseñador web y diseñador gráfico.</p>
+
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="1dc90b5c-95aa-4676-a4af-b42b7e0f5a15">
+          <input type="hidden" name="subject" value="Nuevo mensaje de ivanberlanga.design">
+          <!-- Correct. Full URL with https:// -->
+          <input type="hidden" name="redirect" value="https://ivanberlanga.design/gracias.html">
+          <input type="checkbox" name="botcheck" id="" style="display: none;">
+          <div class="mb-6 flex full column p-b-1">
+              <!--<label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Nombre</label>-->
+              <input type="text" name="name" id="name" placeholder="Nombre" required="">
+          </div>
+          <div class="mb-6 flex full column p-b-1">
+              <!--<label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">email</label>-->
+              <input type="email" name="email" id="email" placeholder="Email" required="">
+          </div>
+          <div class="mb-6 flex full column p-b-1">
+              <!--<label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Teléfono</label>-->
+              <input type="text" name="phone" id="phone" placeholder="Teléfono" required="">
+          </div>
+          <div class="mb-6 flex full column p-b-1">
+            <!--<label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Teléfono</label>-->
+            <textarea type="text" name="mensaje" id="mensaje" placeholder="¿Cómo puedo ayudarte?" rows="10" required=""></textarea>
+        </div>
+          <div class="mb-6">
+              <button type="submit">
+              Enviar
+              </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>       
+          </form>
+    
+        <a class="cta" href="mailto:hola@ivanberlanga.design">Si lo prefieres, escríbeme un email <img src="imgs/icon-envelope.svg"></a>
+ 
       </div>
+      
    </div>
     <div class="video-gradient-ov"></div>
       <video id="background-video" autoplay loop muted playsinline poster="imgs/video-poster.jpg">
