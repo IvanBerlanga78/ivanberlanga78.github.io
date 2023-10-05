@@ -415,15 +415,7 @@ h3.big {
   opacity: 1;
 }
 
-footer .container {
-  height: 80px;
-  align-items: center;
-  background-image: url(../imgs/logo_ivan_v03.svg);
-  background-position: 90% 50%;
-  background-size: 80px;
-  background-repeat: no-repeat;
-  position: relative;
-}
+
 footer h4 {
   font-size: 12px;
   margin: 0;
@@ -445,6 +437,21 @@ footer h4 {
 .testimonios .review .text {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 /* 
 Media Queries
