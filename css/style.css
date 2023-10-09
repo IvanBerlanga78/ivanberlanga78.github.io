@@ -468,6 +468,7 @@ form button {
   background-color: #ffed28;
   color: #000;
 }
+
 /* 
 Media Queries
 */
@@ -540,11 +541,25 @@ Media Queries
     margin: 0 auto;
   }
 
+  .hideOnMobile{
+    display: none;
+  }
+
   .flickity-button {
     display: none;
   }
   #contact {
     position: relative;
+  }
+  .ilustracion .container3 {
+    grid-template: 100%/ 45% 45%;
+  }
+  .ilustracion .container4 {
+    grid-template: repeat(2, 30%) / repeat(2, 45%);
+    align-items: center;
+  }
+  .flickity-viewport {
+    max-height: 100%;
   }
 
 }
