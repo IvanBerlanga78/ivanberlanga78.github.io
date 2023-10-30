@@ -323,7 +323,7 @@ h3.big {
   padding: 5px;
 }
 
-.online .container0, .online .container1, .online .container2, .online .container3, .online .container4, .online .container5, .online .container6, .online .container7   {
+.online .container0, .online .container0a, .online .container0b, .online .container1, .online .container2, .online .container3, .online .container4, .online .container5, .online .container6, .online .container7   {
   display: grid;
   align-items: start;
   column-gap: 20px;

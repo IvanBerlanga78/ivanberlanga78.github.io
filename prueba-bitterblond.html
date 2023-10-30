@@ -14,20 +14,17 @@
 <div class="custom-section">
 <p id="changing-text">CONTACT US</p>
 <p class="sub-text">TO DISCUSS YOUR SPECIFIC NEEDS</p>
-<button class="custom-btn">Get in Touch</button>
+<a href="#" class="custom-btn">Get in touch</a>
 </div>
 <div class="custom-section overlay">
 <p id="changing-text">
-<span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span>
-</p>
+<p id="changing-text">CONTACT US</p>
 <p class="sub-text">TO DISCUSS YOUR SPECIFIC NEEDS</p>
-<button class="custom-btn">Get in Touch</button>
+<a href="#" class="custom-btn">Get in touch</a>
 </div>
 
-
-<script src="script.js"></script> <!-- Asegúrate de ajustar la ruta al archivo JavaScript -->
 </body>
-</html>s
+</html>
 
 <style type="text/css">
 
@@ -57,24 +54,21 @@ margin-top: 40px;
 /* Estilos para el botón customizado */
 .custom-btn{
     border: 2px solid  rgb(238, 102, 73);
-    color: white;
-    background-color:  rgb(238, 102, 73);
+    background-color:rgb(238, 102, 73) ;
     padding: 5px 50px;
+    color: #000;
     font-family: "Dosis", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 28px;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 4px;
-}
-.custom-btn:hover{
-    background-color:white;
-    color: rgb(238, 102, 73);
+    text-decoration: none;
 }
 
 .overlay {
     background: #44ab8b;
-    color: white;
+    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,33 +77,15 @@ margin-top: 40px;
     transition: clip-path 100ms;
 }
 
-/* Estilos para el cursor personalizado */
-.custom-cursor {
-position: fixed;
-width: 330px; /* Tamaño ajustable según tus preferencias */
-height: 330px; /* Tamaño ajustable según tus preferencias */
-background-color: #43aa8a;
-border-radius: 50%;
-pointer-events: none;
-z-index: 1; /* Establecemos un z-index inferior para el cursor */
-transform: translate(-50%, -55%);
-transition: opacity 0.2s ease;
-opacity: 0; /* Ocultar el cursor por defecto */
+.overlay .custom-btn {
+    color: #fff;
 }
+
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-// Código de JavaScript
-});
-
-
-// IVAN
-
-const overlay = document.querySelector('.overlay');
-const changingText = document.querySelector('#changing-text');
-const subText = document.querySelector('.subtext');
-const customButton = document.querySelector('.custom-btn');
+  const overlay = document.querySelector('.overlay');
 
 window.addEventListener('mousemove', (e) => {
             const { clientX, clientY } = e;
@@ -119,14 +95,10 @@ window.addEventListener('mousemove', (e) => {
             gsap.to(overlay, {
                 '--x': `${x}%`,
                 '--y': `${y}%`,
-                duration: 0.3,
-                //ease: 'sine.out'
+                duration: 0.3
             })
         })
-        /*
-        span.addEventListener('click', () => {
-            overlay.classList.toggle('is-open')
-        })
-        */
+});
+
 
 </script>
